@@ -7,7 +7,7 @@ composer require goodyes/wechat_url_check_preventing_blocked_api ^1.1.0
 ```
 # 不死鸟微信防封杀系统免费版
 
-### 我们的官方网站:http://www.v94.cn , 为了使你更快更轻松的使用本API,可以先简单浏览api各个模块.[点我查看](https://github.com/wanjunlengfeng/WechatUrlCheckPreventingBlockedApi/tree/master/%E5%BE%AE%E4%BF%A1%E9%98%B2%E5%B0%81%E6%9D%80%E7%B3%BB%E7%BB%9Fapi%E6%8E%A5%E5%8F%A3%E8%AF%A6%E7%BB%86%E8%AF%B4%E6%98%8E "点我查看")
+### 我们的官方网站:http://www.wechaturl.us , 为了使你更快更轻松的使用本API,可以先简单浏览api各个模块.[点我查看](https://github.com/wanjunlengfeng/WechatUrlCheckPreventingBlockedApi/tree/master/%E5%BE%AE%E4%BF%A1%E9%98%B2%E5%B0%81%E6%9D%80%E7%B3%BB%E7%BB%9Fapi%E6%8E%A5%E5%8F%A3%E8%AF%A6%E7%BB%86%E8%AF%B4%E6%98%8E "点我查看")
 
 ### 不死鸟微信/QQ防封杀系统是适应当下微信封杀规则,开发的一整套防封杀解决方案：
 
@@ -42,7 +42,7 @@ composer require goodyes/wechat_url_check_preventing_blocked_api ^1.1.0
 
 ###### 当你添加后，会自动启动监控微信封杀情况.如果某个网址被封,我们会以短信/微信/邮箱实时通知你.如果需要自动切换到可用网页,请使用”多域名无限网址”功能的防封列表 	 当你添加后，会自动启动监控微信封杀情况.如果某个网址被封,我们会以短信/微信/邮箱实时通知你.如果需要自动切换到可用网页,请使用”多域名无限网址”功能的防封列表
 
- 	1.查询你已经添加了落地页域名列表（本api案例已经支持演示）。 添加/修改/删除域名需要到网页版会员中心去操作：https://www.v94.cn/user/index.html#business_management/land_domain
+ 	1.查询你已经添加了落地页域名列表（本api案例已经支持演示）。 添加/修改/删除域名需要到网页版会员中心去操作：https://www.wechaturl.us/user/index.html#business_management/land_domain
  	2.添加链接（本api案例已经支持演示）
  	3.编辑链接属性（本api案例已经支持演示）
 	4.删除链接（本api案例已经支持演示）
@@ -51,17 +51,17 @@ composer require goodyes/wechat_url_check_preventing_blocked_api ^1.1.0
 
 ##### 当你添加后，会自动启动监控微信封杀情况,如果你设置了多个落地页域名.某个落地页域名封,会自动切换到可用的域名.同时我们会以短信/微信/邮箱实时通知你。本功能能使你的业务0损失。
 
- 	 1.查询你已经添加了落地页域名列表（本api案例已经支持演示）。 添加/修改/删除域名需要到网页版会员中心去操作：https://www.v94.cn/user/index.html#business_management/land_domain
+ 	 1.查询你已经添加了落地页域名列表（本api案例已经支持演示）。 添加/修改/删除域名需要到网页版会员中心去操作：https://www.wechaturl.us/user/index.html#business_management/land_domain
  	 2.添加链接（本api案例已经支持演示）
  	 3.编辑链接属性（本api案例已经支持演示）
  	 4删除链接（本api案例已经支持演示）
 
 #### 六、自定义短域名
 
-	如果你的业务非常重要，使用自己的短域名。可以查看https://www.v94.cn/user/index.html#business_management/user_short_domain_list
+	如果你的业务非常重要，使用自己的短域名。可以查看https://www.wechaturl.us/user/index.html#business_management/user_short_domain_list
 #### 七、还有更多功能
 
-	请到 https://www.v94.cn 查看
+	请到 https://www.wechaturl.us 查看
 
 我们宗旨：如果你的项目依赖微信发展用户，面对微信对第三方封杀越来越严格情况下，产品经理免费微信频繁封杀是非常头疼的事情。
 不死鸟提供这一整套防封杀解决方案，希望能为你解决实际问题。QQ群：876946891
@@ -75,7 +75,7 @@ UrlCheck.GetWeiboUrl.GetWechatUrl_example.php
 //include 'vendor/autoload.php';
 include_once 'businiao.lib/businiao.lib.php';
 $appid='12345678';
-$appkey='GetAppKeyAtThe:https://www.v94.cn';
+$appkey='GetAppKeyAtThe:https://www.wechaturl.us';
 
 /**
  * 返回code代码汇总：http://api.v94.cn/web/#/1?page_id=1
@@ -113,14 +113,14 @@ UrlCycleCheck_example.php
 //include 'vendor/autoload.php';
 include_once 'businiao.lib/businiao.lib.php';
  /**
- * appid 和 appkey请到https://www.v94.cn/user/index.html#userinfo/userinfo 免费获取
+ * appid 和 appkey请到https://www.wechaturl.us/user/index.html#userinfo/userinfo 免费获取
  * 本页面api超级详细介绍页面：http://api.v94.cn/web/#/1?page_id=3
- * 本功能对应的网页版前端：https://www.v94.cn/user/index.html#business_management/url_cycle_check
+ * 本功能对应的网页版前端：https://www.wechaturl.us/user/index.html#business_management/url_cycle_check
  * 本测试页面的功能：按照你设置的频率定时循环检测url($is_monitor 需要开启监控才行)，如果url被微信封杀，则系统会通过微信，短信，邮件实时通知你，以减少你的损失
  返回code代码汇总：http://api.v94.cn/web/#/1?page_id=1
  * ***/
 $appid='12345678';
-$appkey='GetAppKeyAtThe:https://www.v94.cn';
+$appkey='GetAppKeyAtThe:https://www.wechaturl.us';
 
 //new 方法
 $UrlCycleCheck=new UrlCycleCheck($appid,$appkey);
@@ -172,15 +172,15 @@ SingleShortUrl_example.php
 //include 'vendor/autoload.php';
 include_once 'businiao.lib/businiao.lib.php';
 /**
- * appid 和 appkey请到https://www.v94.cn/user/index.html#userinfo/userinfo 免费获取
+ * appid 和 appkey请到https://www.wechaturl.us/user/index.html#userinfo/userinfo 免费获取
  * 本页面api超级详细介绍页面：http://api.v94.cn/web/#/1?page_id=18
- * 本功能对应的网页版前端：https://www.v94.cn/user/index.html#business_management/single_url_list
+ * 本功能对应的网页版前端：https://www.wechaturl.us/user/index.html#business_management/single_url_list
  * 本测试页面的功能：你可以添加任何一个url地址，并生成微博短网址，你只需要将短网址公开。当然系统会实时监控url是否被微信封杀，如果封杀，我们会及时通过微信，短信，邮箱通知你
  *  如果你希望添加无限个网址或被封网址自动更换，请选择另一个接口案例DomainShortUrl_example.php,
  返回code代码汇总：http://api.v94.cn/web/#/1?page_id=1
  * ***/
 $appid='12345678';
-$appkey='GetAppKeyAtThe:https://www.v94.cn';
+$appkey='GetAppKeyAtThe:https://www.wechaturl.us';
 
 //new 方法
 $SingleShortUrl=new SingleShortUrl($appid,$appkey);
@@ -226,14 +226,14 @@ DomainShortUrl_example.php
 //include 'vendor/autoload.php';
 include_once 'businiao.lib/businiao.lib.php';
 /**
- * appid 和 appkey请到https://www.v94.cn/user/index.html#userinfo/userinfo 免费获取
+ * appid 和 appkey请到https://www.wechaturl.us/user/index.html#userinfo/userinfo 免费获取
  * 本页面api超级详细介绍页面：http://api.v94.cn/web/#/1?page_id=14
- * 本功能对应的网页版前端：https://www.v94.cn/user/index.html#business_management/domain_url_list
+ * 本功能对应的网页版前端：https://www.wechaturl.us/user/index.html#business_management/domain_url_list
  * 本测试页面的功能：本功能会自动启动监控微信封杀情况,如果你设置了多个落地页域名.某个落地页域名封,会自动切换到可用的域名.同时我们会以短信/微信/邮箱实时通知你
  返回code代码汇总：http://api.v94.cn/web/#/1?page_id=1
  * ***/
 $appid='12345678';
-$appkey='GetAppKeyAtThe:https://www.v94.cn';
+$appkey='GetAppKeyAtThe:https://www.wechaturl.us';
 
 //new 方法
 $DomainShortUrl=new DomainShortUrl($appid,$appkey);
