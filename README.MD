@@ -1,3 +1,5 @@
+## 由于版权原因,请在开发商官网的github https://github.com/wechaturl/wechat_url_api.git
+
 ```shell
 如果你采用composer安装，复制下面的即可
 composer require goodyes/wechat_url_check_preventing_blocked_api ^1.1.0
