@@ -1,14 +1,15 @@
 <?php
 include_once 'src/businiao.lib/businiao.lib.php';
+//require_once $_SERVER['DOCUMENT_ROOT'].'/vendor/autoload.php';
 /**
- * appid 和 appkey请到https://www.v94.cn/user/index.html#userinfo/userinfo 免费获取
- * 本页面api超级详细介绍页面：http://api.v94.cn/web/#/1?page_id=14
- * 本功能对应的网页版前端：https://www.v94.cn/user/index.html#business_management/domain_url_list
+ * appid 和 appkey请到https://www.wechaturl.us/user/index.html#userinfo/userinfo 免费获取
+ * 本页面api超级详细介绍页面：https://wechaturl.gitbook.io/
+ * 本功能对应的网页版前端：https://www.wechaturl.us/user/index.html#business_management/domain_url_list
  * 本测试页面的功能：本功能会自动启动监控微信封杀情况,如果你设置了多个落地页域名.某个落地页域名封,会自动切换到可用的域名.同时我们会以短信/微信/邮箱实时通知你
- 返回code代码汇总：http://api.v94.cn/web/#/1?page_id=1
+ 返回code代码汇总：https://wechaturl.gitbook.io/
  * ***/
 $appid='12345678';
-$appkey='GetAppKeyAtThe:https://www.v94.cn';
+$appkey='GetAppKeyAtThe:https://www.wechaturl.us';
 
 //new 方法
 $DomainShortUrl=new DomainShortUrl($appid,$appkey);

@@ -65,7 +65,87 @@ class UrlCycleCheck{
     }
     
 }
-
+class CheckIp{
+    private $curl_url='';
+    function __construct($appid,$appkey){
+        $this->curl_url=(new BuSiNiaoApi($appid,$appkey))->get_url(BUSINIAO_API_TYPE_CheckIp);
+        
+    }
+    /**
+     * $ip:ipv4
+     * $search_range:可以是 369,tencent,jinshan,baidu;多个 请用逗号隔开。
+     * 具体查看官方接口https://wechaturl.gitbook.io/wechaturl/check_ip
+     */
+    function CheckIp($ip=null,$search_range=''){
+        if($ip==''){
+            $ip=$this->get_real_client_ip();
+        }
+        $postArr['ip']=$ip;
+        $postArr['user_agent']=$_SERVER['HTTP_USER_AGENT'];
+        $postArr['referer']=$_SERVER['HTTP_REFERER'];
+        $postArr['current_url']=$_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+        if($search_range!=""){
+            $postArr['search_range']=$search_range;
+        }
+        return $this->curl($postArr);
+    }
+    private function curl($postArr){
+        $curl=new ApiCurlLib($this->curl_url,[],$postArr);
+        return $curl->curl();
+    }
+    private function get_real_client_ip(){
+        $real_client_ip=$_SERVER['REMOTE_ADDR'];
+        $ng_client_ip=( isset($_SERVER['HTTP_X_FORWARDED_FOR'])  ?   $_SERVER['HTTP_X_FORWARDED_FOR']    :   "");//反向代理
+        
+        if(isset($_SERVER['HTTP_CLIENTIP'])){
+            $real_client_ip=$_SERVER['HTTP_CLIENTIP'];
+        }
+        if($ng_client_ip!="" and strlen($ng_client_ip)>5){
+            if(strstr($ng_client_ip, ',')!=""){
+                $a=explode(',', $ng_client_ip);
+                $real_client_ip=$a[0];
+                if($this->check_intranet_ip($real_client_ip)){
+                    if(isset($_SERVER['HTTP_X_REAL_IP'])){
+                        $real_client_ip=$_SERVER['HTTP_X_REAL_IP'];
+                    }
+                }
+            }else{
+                $real_client_ip=$ng_client_ip;
+            }
+        }
+        return $real_client_ip;
+    }
+    //检查下内网ip
+    private function check_intranet_ip($ip){
+        if(!IS_CHECK_INTRANET_IP){
+            return ;
+        }
+        
+        //排除google cloud自己的内网ip
+        if(startWith($ip, '10.170.0.')){
+            return ;
+        }
+        $ip_num_list=[
+            [ip2long('192.168.0.0'),ip2long('192.168.255.255')],
+            [ip2long('10.0.0.0'),ip2long('10.255.255.255')],
+            [ip2long('172.16.0.0'),ip2long('172.31.255.255')],
+            [ip2long('100.64.0.0'),ip2long('100.127.255.255')],
+            [ip2long('127.0.0.0'),ip2long('127.255.255.255')]
+        ];
+        $ip_long=ip2long($ip);
+        $find=false;
+        foreach ($ip_num_list as $item){
+            if($ip_long>=$item[0] AND $ip_long<=$item[1]){
+                $find=true;
+                break;
+            }
+        }
+        if(!$find){
+            return;
+        }
+        return $find;
+    }
+}
 
 class SingleShortUrl{
     private $curl_url='';

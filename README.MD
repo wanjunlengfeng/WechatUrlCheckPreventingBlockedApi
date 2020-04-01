@@ -1,15 +1,31 @@
 ## 由于版权原因,请在开发商官网的github https://github.com/wechaturl/wechat_url_api.git
 
+## api完整教程镜像版 https://wechaturl.gitbook.io/
+
 ```shell
+注意:php版本必须是php 7.* 或以上
 如果你采用composer安装，复制下面的即可
 composer require goodyes/wechat_url_check_preventing_blocked_api ^1.1.0
 #https://packagist.org/packages/goodyes/wechat_url_check_preventing_blocked_api
 ```
 # 不死鸟微信防封杀系统免费版
 
-### 我们的官方网站:http://www.wechaturl.us , 为了使你更快更轻松的使用本API,可以先简单浏览api各个模块.[点我查看](https://github.com/wanjunlengfeng/WechatUrlCheckPreventingBlockedApi/tree/master/%E5%BE%AE%E4%BF%A1%E9%98%B2%E5%B0%81%E6%9D%80%E7%B3%BB%E7%BB%9Fapi%E6%8E%A5%E5%8F%A3%E8%AF%A6%E7%BB%86%E8%AF%B4%E6%98%8E "点我查看")
+### 我们的官方网站:https://www.wechaturl.us , 为了使你更快更轻松的使用本API,可以先简单浏览api各个模块.[点我查看](https://wechaturl.gitbook.io/ "点我查看")
 
 ### 不死鸟微信/QQ防封杀系统是适应当下微信封杀规则,开发的一整套防封杀解决方案：
+
+##### CheckIp_example.php 功能:屏蔽中国最大的社交聊天软件所在公司以及其他厂商的云端IP检测
+
+##### splice_url_anyurl.php 功能:自定义参数传递(无需api,即可实现防封)
+
+##### DomainShortUrl_example.php 功能:域名防封相关接口案例
+
+##### SingleShortUrl_example.php 功能:任意网址防封相关接口案例
+
+##### UrlCheck.GetWeiboUrl.GetWechatUrl_example.php 功能:网址实时检测是否被红.将长网址转短网址
+
+##### UrlCycleCheck_example.php 功能:管理网址检测
+
 
 ####  一、查询功能
 
@@ -59,12 +75,17 @@ composer require goodyes/wechat_url_check_preventing_blocked_api ^1.1.0
 #### 六、自定义短域名
 
 	如果你的业务非常重要，使用自己的短域名。可以查看https://www.wechaturl.us/user/index.html#business_management/user_short_domain_list
-#### 七、还有更多功能
+
+#### 七、各个厂商黑名单ip查询
+
+	系统已经完整集成厂商ip黑名单，当然如果你的业务同时集成这个黑名单，效果更好。https://wechaturl.gitbook.io/wechaturl/check_ip
+
+#### 八、还有更多功能
 
 	请到 https://www.wechaturl.us 查看
 
 我们宗旨：如果你的项目依赖微信发展用户，面对微信对第三方封杀越来越严格情况下，产品经理免费微信频繁封杀是非常头疼的事情。
-不死鸟提供这一整套防封杀解决方案，希望能为你解决实际问题。QQ群：876946891
+不死鸟提供这一整套防封杀解决方案，希望能为你解决实际问题。
 当你下载源码，可以看到以上功能的演示
 
 
@@ -78,7 +99,7 @@ $appid='12345678';
 $appkey='GetAppKeyAtThe:https://www.wechaturl.us';
 
 /**
- * 返回code代码汇总：http://api.v94.cn/web/#/1?page_id=1
+ * 返回code代码汇总：https://wechaturl.gitbook.io/wechaturl/code_summary
  * 本案例做了3个功能
  * 1.微信url检测状态
  * 2.获取微信短网址
@@ -86,21 +107,21 @@ $appkey='GetAppKeyAtThe:https://www.wechaturl.us';
  * */
 $url='https://www.baidu.com';
 /**微信url检测状态
- * api详细帮助：http://api.v94.cn/web/#/1?page_id=2
+ * api详细帮助：https://wechaturl.gitbook.io
  * 
  * */
 $UrlCheck_result=(new UrlCheck($appid,$appkey))->get($url);
 print_r(json_decode($UrlCheck_result,true));
 
 /**获取微信短网址
- * http://api.v94.cn/web/#/1?page_id=9
+ * https://wechaturl.gitbook.io
  * */
 $GetWechatShortUrl_result=(new GetWechatShortUrl($appid,$appkey))->get($url);
 print_r(json_decode($GetWechatShortUrl_result,true));
 
 /**获取微博短网址
  * 
- * http://api.v94.cn/web/#/1?page_id=8
+ * https://wechaturl.gitbook.io
  * **/
 $GetWeiboShortUrl_result=(new GetWeiboShortUrl($appid,$appkey))->get($url);
 print_r(json_decode($GetWeiboShortUrl_result,true));
@@ -114,10 +135,10 @@ UrlCycleCheck_example.php
 include_once 'businiao.lib/businiao.lib.php';
  /**
  * appid 和 appkey请到https://www.wechaturl.us/user/index.html#userinfo/userinfo 免费获取
- * 本页面api超级详细介绍页面：http://api.v94.cn/web/#/1?page_id=3
+ * 本页面api超级详细介绍页面：https://wechaturl.gitbook.io
  * 本功能对应的网页版前端：https://www.wechaturl.us/user/index.html#business_management/url_cycle_check
  * 本测试页面的功能：按照你设置的频率定时循环检测url($is_monitor 需要开启监控才行)，如果url被微信封杀，则系统会通过微信，短信，邮件实时通知你，以减少你的损失
- 返回code代码汇总：http://api.v94.cn/web/#/1?page_id=1
+ 返回code代码汇总：https://wechaturl.gitbook.io/wechaturl/code_summary
  * ***/
 $appid='12345678';
 $appkey='GetAppKeyAtThe:https://www.wechaturl.us';
@@ -152,7 +173,7 @@ echo "<br>------------------下面修改监控属性返回结果----------------
 
 //删除监控属性，请自己接触下面2段代码注释
 echo "<br>------------------下面是删除监控返回结果---------------------------------<br>\n";
-//$delete_result=$UrlCycleCheck->delete('http://www.baidu.com');
+//$delete_result=$UrlCycleCheck->delete('http://www.google.com');
 //print_r(json_decode($delete_result,true));
 
 
@@ -173,11 +194,11 @@ SingleShortUrl_example.php
 include_once 'businiao.lib/businiao.lib.php';
 /**
  * appid 和 appkey请到https://www.wechaturl.us/user/index.html#userinfo/userinfo 免费获取
- * 本页面api超级详细介绍页面：http://api.v94.cn/web/#/1?page_id=18
+ * 本页面api超级详细介绍页面：https://wechaturl.gitbook.io/wechaturl/code_summary
  * 本功能对应的网页版前端：https://www.wechaturl.us/user/index.html#business_management/single_url_list
  * 本测试页面的功能：你可以添加任何一个url地址，并生成微博短网址，你只需要将短网址公开。当然系统会实时监控url是否被微信封杀，如果封杀，我们会及时通过微信，短信，邮箱通知你
  *  如果你希望添加无限个网址或被封网址自动更换，请选择另一个接口案例DomainShortUrl_example.php,
- 返回code代码汇总：http://api.v94.cn/web/#/1?page_id=1
+ 返回code代码汇总：https://wechaturl.gitbook.io/wechaturl/code_summary
  * ***/
 $appid='12345678';
 $appkey='GetAppKeyAtThe:https://www.wechaturl.us';
@@ -227,10 +248,10 @@ DomainShortUrl_example.php
 include_once 'businiao.lib/businiao.lib.php';
 /**
  * appid 和 appkey请到https://www.wechaturl.us/user/index.html#userinfo/userinfo 免费获取
- * 本页面api超级详细介绍页面：http://api.v94.cn/web/#/1?page_id=14
+ * 本页面api超级详细介绍页面：https://wechaturl.gitbook.io/wechaturl/code_summary
  * 本功能对应的网页版前端：https://www.wechaturl.us/user/index.html#business_management/domain_url_list
  * 本测试页面的功能：本功能会自动启动监控微信封杀情况,如果你设置了多个落地页域名.某个落地页域名封,会自动切换到可用的域名.同时我们会以短信/微信/邮箱实时通知你
- 返回code代码汇总：http://api.v94.cn/web/#/1?page_id=1
+ 返回code代码汇总：https://wechaturl.gitbook.io/wechaturl/code_summary
  * ***/
 $appid='12345678';
 $appkey='GetAppKeyAtThe:https://www.wechaturl.us';

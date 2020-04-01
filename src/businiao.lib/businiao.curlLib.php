@@ -78,7 +78,7 @@ class ApiCurlLib {
         $ch = curl_init($this->url);
         curl_setopt($ch, CURLOPT_HEADER,0);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_TIMEOUT, 60);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 10);
         if(!empty($this->postArr) and !$this->disale_post){
             curl_setopt($ch, CURLOPT_POST, true);
             curl_setopt($ch, CURLOPT_POSTFIELDS,$this->postArr);

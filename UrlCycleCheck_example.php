@@ -1,14 +1,15 @@
 <?php
 include_once 'src/businiao.lib/businiao.lib.php';
+//require_once $_SERVER['DOCUMENT_ROOT'].'/vendor/autoload.php';
  /**
- * appid 和 appkey请到https://www.v94.cn/user/index.html#userinfo/userinfo 免费获取
- * 本页面api超级详细介绍页面：http://api.v94.cn/web/#/1?page_id=3
- * 本功能对应的网页版前端：https://www.v94.cn/user/index.html#business_management/url_cycle_check
+ * appid 和 appkey请到https://www.wechaturl.us/user/index.html#userinfo/userinfo 免费获取
+ * 本页面api超级详细介绍页面：https://wechaturl.gitbook.io/
+ * 本功能对应的网页版前端：https://www.wechaturl.us/user/index.html#business_management/url_cycle_check
  * 本测试页面的功能：按照你设置的频率定时循环检测url($is_monitor 需要开启监控才行)，如果url被微信封杀，则系统会通过微信，短信，邮件实时通知你，以减少你的损失
- 返回code代码汇总：http://api.v94.cn/web/#/1?page_id=1
+ 返回code代码汇总：https://wechaturl.gitbook.io/
  * ***/
 $appid='12345678';
-$appkey='GetAppKeyAtThe:https://www.v94.cn';
+$appkey='GetAppKeyAtThe:https://www.wechaturl.us';
 
 //new 方法
 $UrlCycleCheck=new UrlCycleCheck($appid,$appkey);
