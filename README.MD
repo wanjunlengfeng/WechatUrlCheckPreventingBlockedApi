@@ -1,4 +1,4 @@
-## 由于版权原因,请在开发商官网的github https://github.com/wechaturl/wechat_url_api.git
+## 由于被开发商版权侵权警告,版本陈旧，不再更新。请访问官方的最新github源码 https://github.com/wechaturl/wechat_url_api.git
 
 ## api完整教程镜像版 https://wechaturl.gitbook.io/
 
