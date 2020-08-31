@@ -1,30 +1,7 @@
-## CODE代码汇总-不死鸟微信网址防封杀免费API接口
-不死鸟防封系统是完整的,目前已经支持 "实时监控封杀状态","被封域名网址恢复正常","提示浏览器打开","多域名自动切换","多级安全级别跳转",网址"阅读即焚",程序的功能都可以免费使用!https://www.v94.cn
+## Due to the developer's copyright infringement warning, this git version is outdated and no longer be updated.
+### Please visit the official latest github  open source code:https://github.com/wechaturl/wechat_url_api.git
+### api complete tutorial mirror version  https://wechaturl.gitbook.io/
 
-###  url/域名微信检测状态码status
-|  code/status | 说明  |
-| :------------ | :------------ |
-| 4000  |url/域名在微信里面访问正常  |
-| 2000  |  url/域名在微信里面访问被封或者被拦截 |
-| 0  | 手工暂停.你需要手工修改状态才能启用 |
-
-###  code状态码
- |code |说明  |
-| :------------ | :------------ |
- |1001| appid或appkey为空,请到http://www.v94.cn/user/index.html 去免费获取appid和appkey 
-|1002| appkey不合法，请到http://www.v94.cn/user/index.html 去免费获取appid和appkey
-|1301|查询频率太低了！！
-|1302|参数url:请输入http(s)://开头的网址
-|1303|参数domain:不能包含http(s):// ,结尾不能包含/
-|1304|参数type:type的值只能是add,edit,delete,list,frequency
-|1305|参数frequency:超出限制，请将frequency修改更大一些
-|1401|你之前已经添加了相同的数据，因此你不能重复添加 1402:当前数据不存在，请检查
-|1402|当前数据不存在，请检查
-|1403|网址在微信平台被封，请将参数visit_type改成browser或frame
-|1404|生成微博短网址出了问题，请从新尝试
-|1405|没有找到url对应的落地叶域名
-|1406|落地叶url格式错误，只能以http(s)://xxxxx.xx格式，后面不能有"/"等字符串
-| 1501|抱歉，你没有权限添加！
-| 1|ok ，数据返回正常
-|  0|失败，
-| -1|没有任何变化,如没有做任何修改
+## 由于被开发商版权侵权警告,不能拉取官方的源代码。
+### 请访问官方的最新github源码 https://github.com/wechaturl/wechat_url_api.git
+### api完整教程镜像版 https://wechaturl.gitbook.io/

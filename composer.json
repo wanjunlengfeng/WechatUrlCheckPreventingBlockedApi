@@ -1,43 +1,7 @@
-{
-	"name" : "goodyes/wechat_url_check_preventing_blocked_api",
-	"type" : "library",
-	"description" : "QQ/微信URL链接网址防封杀，目前已经支持 实时监控封杀状态,被封域名网址恢复正常,提示浏览器打开,多域名自动切换,多级安全级别跳转,网址 阅读即焚 ,程序的功能都可以免费使用，v94.cn",
-	"time" : "2018-12-30",
-	"keywords" : [
-		"微信防封杀",
-		"微信网址防封杀",
-		"微信链接防封杀",
-		"微信URL防封杀",
-		"微信网址恢复正常",
-		"wechat防封杀",
-		"wechat网址防封杀",
-		"wechat链接防封杀",
-		"wechatURL防封杀",
-		"wechat网址恢复正常",
-		"weixin",
-		"wechat",
-		"weixin url",
-		"wechat url",
-		"wechat blocked",
-		"QQ",
-		"QQ url",
-		"QQ blocked"
-	],
-	"license" : "MIT",
-	"authors" : [{
-			"name" : "goodyes",
-			"email" : "wanjun8888@gmail.com",
-			"homepage" : "http://www.v94.cn",
-			"role" : "Developer"
-		}
-	],
-	"require" : {
-		"php" : ">=5.3.0"
-	},
-	"minimum-stability" : "stable",
-	"autoload" : {
-		"files" : [
-			"src/businiao.lib/businiao.lib.php"
-		]
-	}
-}
+## Due to the developer's copyright infringement warning, this git version is outdated and no longer be updated.
+### Please visit the official latest github  open source code:https://github.com/wechaturl/wechat_url_api.git
+### api complete tutorial mirror version  https://wechaturl.gitbook.io/
+
+## 由于被开发商版权侵权警告,不能拉取官方的源代码。
+### 请访问官方的最新github源码 https://github.com/wechaturl/wechat_url_api.git
+### api完整教程镜像版 https://wechaturl.gitbook.io/

@@ -1,33 +1,7 @@
-<?php
-include_once 'src/businiao.lib/businiao.lib.php';
-//require_once $_SERVER['DOCUMENT_ROOT'].'/vendor/autoload.php';
-$appid='12345678';
-$appkey='GetAppKeyAtThe:https://www.wechaturl.us';
+## Due to the developer's copyright infringement warning, this git version is outdated and no longer be updated.
+### Please visit the official latest github  open source code:https://github.com/wechaturl/wechat_url_api.git
+### api complete tutorial mirror version  https://wechaturl.gitbook.io/
 
-/**
- * 返回code代码汇总：https://wechaturl.gitbook.io/
- * 本案例做了3个功能
- * 1.微信url检测状态
- * 2.获取微信短网址
- * 3.获取微博短网址
- * */
-$url='https://www.baidu.com';
-/**微信url检测状态
- * api详细帮助：https://wechaturl.gitbook.io/
- * 
- * */
-$UrlCheck_result=(new UrlCheck($appid,$appkey))->get($url);
-print_r(json_decode($UrlCheck_result,true));
-
-/**获取微信短网址
- * https://wechaturl.gitbook.io/
- * */
-$GetWechatShortUrl_result=(new GetWechatShortUrl($appid,$appkey))->get($url);
-print_r(json_decode($GetWechatShortUrl_result,true));
-
-/**获取微博短网址
- * 
- * https://wechaturl.gitbook.io/
- * **/
-$GetWeiboShortUrl_result=(new GetWeiboShortUrl($appid,$appkey))->get($url);
-print_r(json_decode($GetWeiboShortUrl_result,true));
+## 由于被开发商版权侵权警告,不能拉取官方的源代码。
+### 请访问官方的最新github源码 https://github.com/wechaturl/wechat_url_api.git
+### api完整教程镜像版 https://wechaturl.gitbook.io/
